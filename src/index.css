@@ -53,7 +53,7 @@ main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   overflow-y: auto;
 }
@@ -72,4 +72,70 @@ footer p {
 
   font-size: 12px;
   color: #fff;
+}
+
+
+
+ul {
+
+  width: 100%;
+  list-style: none;
+  padding: 0 0.25rem 0.25rem;
+}
+
+ul li::before {
+
+  content: "\200B";
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px 12px 12px;
+  margin: 0.25rem 0;
+  background-color: #eee;
+
+}
+
+.item:first-child {
+  margin: 0;
+}
+
+.item input[type="checkbox"] {
+  text-align: center;
+  width: 2.5rem;
+  width: 48px;
+  min-width: 48px;
+  height: 2.5rem;
+  min-height: 48px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.item input[type="checkbox"]:focus + label {
+  text-decoration: underline;
+}
+
+.item > label {
+
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+.item svg {
+
+  width: 48px;
+  min-width: 48px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 16px;
+  color:#0703d1;
+}
+
+.item svg:hover,
+.item svg:focus {
+
+  color: #ee2121;
+  outline: none;
 }
